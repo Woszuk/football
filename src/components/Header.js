@@ -1,21 +1,16 @@
 import React from 'react'
-import { Field, reduxForm } from 'redux-form'
+import Form from './Form'
+import Nav from './Nav';
 
 class Header extends React.Component {
-    onSubmit = (formValues) => {
-        console.log(formValues);
-    }
+    
 
     render() {
         return (
-            <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
-                <Field name="text" component="input" type="text" />
-                <button>Submit</button>
-            </form>
+            <Nav />
+            // <Form onSubmit={this.onSubmit} onChange={this.onChange}/>
         )
     }
 }
 
-export default reduxForm({
-    form: 'search'
-})(Header)
+export default Header;
