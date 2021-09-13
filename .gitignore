@@ -5,6 +5,7 @@
 test.js
 /.pnp
 .pnp.js
+Form.js
 
 # testing
 /coverage

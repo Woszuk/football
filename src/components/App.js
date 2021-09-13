@@ -1,6 +1,9 @@
 import React from 'react'
+import { Route, Router, Switch } from 'react-router-dom'
+import history from '../history';
+
 import Header from './Header';
-import football from '../apis/football'
+import EkstraklasaList from './EkstraklasList';
 
 import '../sass/base/_base.scss'
 import './App.scss'
@@ -8,7 +11,12 @@ import './App.scss'
 const App = () => {
     return (
         <div className="container">
-            <Header />
+            <Router history={history}>
+                <Header />
+                <Switch>
+                    <Route path="/" exact component={EkstraklasaList} />
+                </Switch>
+            </Router>
         </div>
     )
 }
