@@ -3,7 +3,7 @@ import { Route, Router, Switch } from 'react-router-dom'
 import history from '../history';
 
 import Header from './Header';
-import EkstraklasaList from './EkstraklasList';
+import Teams from './Teams';
 
 import '../sass/base/_base.scss'
 import './App.scss'
@@ -14,7 +14,7 @@ const App = () => {
             <Router history={history}>
                 <Header />
                 <Switch>
-                    <Route path="/" exact component={EkstraklasaList} />
+                    <Route path="/" exact component={Teams} />
                 </Switch>
             </Router>
         </div>
